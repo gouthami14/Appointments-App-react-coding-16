@@ -44,7 +44,7 @@ class Appointments extends Component {
     const newAppointment = {
       id: v4(),
       title: titleInput,
-      date: dateInput,
+      date: formattedDate,
       isStarred: false,
     }
 
@@ -101,8 +101,8 @@ class Appointments extends Component {
                   DATE
                 </label>
                 <input
-                  type="text"
-                  id="data"
+                  type="date"
+                  id="date"
                   value={dateInput}
                   onChange={this.onChangeDateInput}
                   className="input"
